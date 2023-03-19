@@ -33,6 +33,7 @@ button {
   background: white;
   border: 1px solid #eee;
   padding: 8px 24px;
+  /* can also be done margin: 0px auto; */
   margin-left: auto;
   margin-right: auto;
   display: block;
