@@ -1,6 +1,13 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  /* gives space around all edges */
+  padding: 8px;
+  /* maximizes space between the flex items */
+  display: flex;
+  justify-content: space-between;
+  /* cross axis/verticly alligned center */
+  align-items: center;
 }
 
 .logo {
@@ -9,11 +16,20 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+  /* also centers the logo not needed here */
+  /* margin:auto; */
 }
-
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  /* removes left padding for li dot */
+  padding: 0;
+  /* aligns list items horizontally 
+    forces a small gap between each */
+  display: flex;
+  gap: 15px;
+
+
 }
 
 a {
