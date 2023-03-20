@@ -24,3 +24,31 @@ img {
   justify-content: center;
   background: #eee;
 }
+/* this could be removed and just give .title a bottom margin */
+.main-column {
+  display: flex;
+  /* make all of it a column and put a gap between title and row-box  */
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+/* similar to solutions .container */
+.row-box {
+  display: flex;
+  /* this combo makes them 52px apart regardless of view size */
+  justify-content: center;
+  gap: 52px;
+}
+/* similar to solution .info */
+.img-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* forces 200px width */
+  max-width: 200px;
+
+}
+/* this could have been done in the .body class */
+.text {
+  text-align: center;
+}
