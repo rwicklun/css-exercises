@@ -2,28 +2,76 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  /* forces header content footer to be top to bottom */
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  /* font setting and makes leftmost gap from edge */
+  font-size: 32px;
+  font-weight: 900;
+  padding-left: 16px;
+  /* centers content vertically that cannot grow */
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  /* flex align center vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  /* maintains a minimum size regardless of viewport */
+  flex-shrink: 0;
 }
-
+.sidebar ul {
+  /* clear default extra space */
+  padding: 0;
+  margin: 0;
+  /* remove the list dots */
+  list-style-type: none;
+}
+li {
+  margin: 16px;
+}
+a {
+  /* removes the underline on the links */
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-basis: 300px;
+  
+}
+/* this div is .container in solution */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 32px;
+}
+/* this div is .body in solutions */
+.container {
+  display: flex;
+  flex-grow: 1;
 }
